@@ -152,15 +152,15 @@ export const useErmStore = create<ErmStore>()(
 
         const assessmentId = target.assessmentId;
 
-        const updatedQuestionnaires = state.questionnaires.map((q) =>
-          q.id === questionnaireId
-            ? {
-                ...q,
-                status: "Completed",
-                answers,
-              }
-            : q
-        );
+       const updatedQuestionnaires: Questionnaire[] = state.questionnaires.map((q) =>
+  q.id === questionnaireId
+    ? {
+        ...q,
+        status: "Completed" as const,
+        answers,
+      }
+    : q
+);
 
         const completedCount = updatedQuestionnaires.filter(
           (q) => q.assessmentId === assessmentId && q.status === "Completed"

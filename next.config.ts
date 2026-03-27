@@ -1,16 +1,22 @@
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 
-const isProd = process.env.NODE_ENV === "production";
-const repoName = "initials-erm";
+const repo = "initials-erm";
 
-const nextConfig: NextConfig = {
-  output: "export",
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
-  basePath: isProd ? `/${repoName}` : "",
-  assetPrefix: isProd ? `/${repoName}/` : "",
-};
+export default function nextConfig(phase: string): NextConfig {
+  const isDev = phase === PHASE_DEVELOPMENT_SERVER;
 
-export default nextConfig;
+  return {
+    output: "export",
+    images: {
+      unoptimized: true,
+    },
+    trailingSlash: true,
+    ...(isDev
+      ? {}
+      : {
+          basePath: `/${repo}`,
+          assetPrefix: `/${repo}/`,
+        }),
+  };
+}

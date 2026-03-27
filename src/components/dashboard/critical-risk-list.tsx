@@ -1,4 +1,4 @@
-type RiskItem = {
+export type RiskItem = {
   id: string;
   category: string;
   categoryColor: "warning" | "info";

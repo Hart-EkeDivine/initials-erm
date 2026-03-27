@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Questionnaire, useErmStore } from "@/store/erm-store";
+import { useErmStore } from "@/store/erm-store";
+import { Questionnaire } from "@/types/assessment";
 
 type Props = {
   isOpen: boolean;
@@ -22,10 +23,11 @@ export default function RespondentQuestionnaireModal({
 
   if (!isOpen || !questionnaire) return null;
 
-  function handleSubmit() {
-    if (!q1 || !q2 || !q3) return;
+ function handleSubmit() {
+  if (!questionnaire) return;
+  if (!q1 || !q2 || !q3) return;
 
-    submitQuestionnaire(questionnaire.id, { q1, q2, q3 });
+  submitQuestionnaire(questionnaire.id, { q1, q2, q3 });
 
     setQ1("");
     setQ2("");

@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Questionnaire, useErmStore } from "@/store/erm-store";
+import { useErmStore } from "@/store/erm-store";
+import { Questionnaire } from "@/types/assessment";
 import RespondentQuestionnaireModal from "./respondent-questionnaire-modal";
 
 type Props = {

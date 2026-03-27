@@ -1,3 +1,6 @@
+import type { RiskItem } from "@/components/dashboard/critical-risk-list";
+
+
 export const dashboardStats = [
   {
     title: "CRITICAL RISKS",
@@ -25,7 +28,7 @@ export const dashboardStats = [
   },
 ] as const;
 
-export const criticalRisks = [
+export const criticalRisks: RiskItem[] = [
   {
     id: "BC-018",
     category: "BCMS",
