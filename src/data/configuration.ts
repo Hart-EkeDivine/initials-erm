@@ -1,3 +1,7 @@
+import type { CriteriaRow } from "@/components/configuration/criteria-table";
+
+
+
 export const frameworks = [
   {
     label: "ISO 27001 — Information Security",
@@ -35,7 +39,7 @@ export const matrixValues = [
   [5, 10, 15, 20, 25],
 ];
 
-export const criteriaRows = [
+export const criteriaRows: CriteriaRow[] = [
   {
     classification: "Critical",
     scoreRange: "16–25",

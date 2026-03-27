@@ -1,4 +1,4 @@
-type CriteriaRow = {
+export type CriteriaRow = {
   classification: string;
   scoreRange: string;
   response: string;
