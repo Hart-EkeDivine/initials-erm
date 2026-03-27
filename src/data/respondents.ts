@@ -1,0 +1,33 @@
+export const sampleNames = [
+  "Kemi Okonkwo",
+  "Femi Adeyemi",
+  "Adaobi Nwosu",
+  "Tunde Balogun",
+  "Ifeoma Eze",
+  "Samuel Yusuf",
+  "Bola Akinola",
+  "Amaka Obi",
+  "Ridwan Salisu",
+  "Chioma Okafor",
+  "David Ojo",
+  "Mercy James",
+  "Ibrahim Bello",
+  "Ese Omoruyi",
+  "Janet Umeh",
+  "Tosin Alabi",
+  "Chinedu Nnamdi",
+  "Aisha Musa",
+  "Peter Ekanem",
+  "Ruth Edet",
+];
+
+export const departments = [
+  "IT",
+  "Finance",
+  "Operations",
+  "HR",
+  "Legal",
+  "Risk",
+  "Compliance",
+  "Admin",
+];
